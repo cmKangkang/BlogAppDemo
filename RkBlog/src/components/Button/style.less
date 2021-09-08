@@ -1,0 +1,51 @@
+@foreColor: #ffffff;
+@bgColor: #333333;
+.btn {
+  border-radius: 3px;
+  border: 1px solid @bgColor;
+  background: transparent;
+  color: @bgColor;
+  padding: 0 12px;
+  transition: all .2s ease-in-out;
+  &:hover {
+    border-color: #777777;
+    color: #777777;
+    cursor: pointer;
+  }
+}
+
+.btn.primary {
+  background: @bgColor;
+  color: @foreColor;
+  transition: all .2s ease-in-out;
+  &:hover {
+    background: #6a6a6a;
+  }
+}
+
+.btn.danger {
+  background: #dd0033;
+  color: #ffffff;
+  transition: all .2s ease-in-out;
+  &:hover {
+    background: #bb0033;
+  }
+}
+
+.btn.max {
+  height: 32px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.btn.mid {
+  height: 28px;
+  width: auto;
+  font-size: 13px;
+}
+
+.btn.min {
+  height: 24px;
+  width: auto;
+  font-size: 12px;
+}

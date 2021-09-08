@@ -1,0 +1,6 @@
+{
+  "port": 10086,
+  "mongo_host": "localhost:27017",
+  "mongo_db": "RkblogDb",
+  "uploadSizeLimit": 2097152
+}

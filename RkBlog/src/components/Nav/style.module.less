@@ -1,0 +1,18 @@
+@import '../../assets/styles/var.less';
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &_item{
+    color: #333333;
+    font-size: 16px;
+    .hover_transition();
+    &:hover {
+      color: #aaaaaa;
+    }
+    &_active {
+      color: #222222;
+      font-weight: 600;
+    }
+  }
+}

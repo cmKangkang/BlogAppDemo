@@ -1,0 +1,144 @@
+@height: 160px;
+@width: 320px;
+
+.text_ellisis(@clamp: 1) {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @clamp;
+  overflow: hidden;
+  word-wrap: break-all;
+}
+
+.hover_transition() {
+  transition: all .3s ease-in-out;
+}
+
+.user_art {
+  min-width: @width;
+  height: @height;
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  // border: 1px solid #30363d;
+  position: relative;
+  box-shadow: 0px .5px 3px 0 rgba(0 0 0 / .5);
+  .hover_transition();
+  &:hover {
+    transform: translatey(-3px);
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, .3) ;
+  }
+}
+
+.user_art_banner {
+  width: @height;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 900;
+  &::before {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: all ease-in-out .3s;
+    z-index: 1;
+  }
+  &:hover {
+    cursor: pointer;
+    &::before {
+      background: #000000;
+    }
+    cursor: pointer;
+    img {
+      transform: scale(1.07);
+    }
+  }
+  img {
+    transition: all ease-in-out .3s;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+  }
+  transition: all ease-in-out .3s;
+}
+
+.user_art_info {
+  padding: 12px;
+  &:hover {
+    cursor: pointer;
+  }
+  .user_art_title {
+    font-size: 18px;
+    margin: 0 !important;
+    font-weight: 600;
+    width: 120px;
+    .text_ellisis(1);
+  }
+  h3 {
+    font-size: 14px;
+    width: 130px;
+    .text_ellisis(1);
+  }
+  span {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    
+    .text_ellisis(1);
+    svg {
+      width: 14px;
+      height: 14px;
+      fill: #333333;
+      margin-right: 4px;
+    }
+  }
+}
+
+.user_func_btn {
+  position: absolute;
+  width: 16px;
+  height: 32px;
+  top: 12px;
+  right: 12px;
+  z-index: 1000;
+  &:hover {
+    cursor: pointer;
+  }
+  svg {
+    width: 16px;
+  }
+}
+
+.user_func_menu {
+  position: absolute;
+  box-sizing: border-box;
+  background: #333333;
+  color: #ffffff;
+  border-radius: 3px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  right: 8px;
+  top: 32px;
+  width: 60px;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 1px 2px 8px 0 rgba(0 0 0 / 40%);
+  transition: all linear .3s;
+  .func_menu_item {
+    text-align: center;
+    padding: 3px;
+    transition: all linear .3s;
+    &:hover {
+      background: #6a6a6a;
+      cursor: pointer;
+    }
+  }
+}
+
+.user_func_menu.collapse {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}

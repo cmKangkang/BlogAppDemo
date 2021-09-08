@@ -1,0 +1,12 @@
+.hover_transition() {
+  transition: all .3s ease-in-out;
+}
+
+.text_ellisis(@clamp: 1) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @clamp;
+  word-wrap: break-word;
+  overflow: hidden;
+}

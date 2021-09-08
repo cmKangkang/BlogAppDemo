@@ -1,0 +1,37 @@
+.tag_group {
+  display: flex;
+  .tag {
+    border: 1px solid #666666;
+    border-radius: 3px;
+    padding: 1px 6px;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    transition: all ease-in-out .3s;
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0px 1px 4px 0 rgba(0 0 0 / .2) ;
+      border: 1px solid #aaaaaa;
+    }
+    &_btn {
+      margin-left: 4px;
+      svg {
+        transition: all ease-in-out .3s;
+      }
+      &:hover {
+        cursor: pointer;
+        svg {
+          fill: #6a6a6a;
+        }
+      }
+    }
+  }
+  svg.icon.add_btn {
+    transition: all ease-in-out .3s;
+    &:hover {
+      fill: #aaaaaa;
+    }
+  }
+}

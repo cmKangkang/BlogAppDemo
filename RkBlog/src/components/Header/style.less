@@ -1,0 +1,145 @@
+
+@import '../../assets/styles/var.less';
+.header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, .9);
+  -webkit-backdrop-filter:blur(32px);
+  backdrop-filter: blur(32px);
+  transition: height 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  // box-shadow: 0 1px 5px rgba(0 0 0 / 13%) inset;
+  box-shadow: 0 1px 8px rgba(0 0 0 / .5);
+  // border-bottom: 1px solid #333333;
+  z-index: 998;
+}
+
+.header_container {
+  margin: auto;
+  padding: 0 24px !important;
+  padding: 24px;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  .header_logo {
+    h2 {
+      margin: 0;
+      line-height: 48px;
+    }
+    display: flex;
+    img {
+      height: 48px;
+      // width: 64px;
+      object-position: center;
+    }
+  }
+  .nav {
+    font-size: 16px;
+    &_item {
+      margin: 0 12px;
+      &:hover {
+        color: #aaaaaa;
+      }
+      &_active {
+        color: #222222;
+        font-weight: 600;
+      }
+    }
+  }
+  .nav_btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header_container {
+    .nav {
+      display: none;
+    }
+    .nav_btn {
+      display: block;
+      &:hover {
+        cursor: pointer;
+      }
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: #333333;
+      }
+      &:hover {
+        svg {
+          fill: #aaaaaa;
+        }
+      }
+    }
+  }
+
+  .nav_menu {
+    box-sizing: border-box;
+    padding: 24px 48px;
+    overflow: hidden;
+    position: fixed;
+    top: 48px;
+    left: 0px; right: 0px;
+    background: rgba(255, 255, 255, .9);
+    -webkit-backdrop-filter:blur(32px);
+    backdrop-filter: blur(32px);
+    transition: all linear .3s;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    .nav_item {
+      font-size: 16px;
+      letter-spacing: 1px;
+      margin: 12px 0;
+    }
+    &_btn {
+      border: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background: transparent;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      svg {
+        transition: all linear .3s;
+        height: 14px;
+        width: 14px;
+      }
+      &:hover {
+        cursor: pointer;
+        svg {
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+  .nav_menu.collapse {
+    height: 0;
+    padding: 0 48px;
+    border-bottom: 2px solid #aaaaaa;
+    .nav_menu_btn {
+      svg {
+        transform: rotate(180deg);
+      }
+      &:hover {
+        cursor: pointer;
+        svg {
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// 需要媒体查询

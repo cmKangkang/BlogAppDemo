@@ -1,0 +1,35 @@
+@foreColor: #eeeeee;
+@bgColor: #333333;
+.tip_btn {
+  position: relative;
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: #333333;
+    &:hover {
+      fill: #aaaaaa;
+      cursor: pointer;
+    }
+  }
+  .tip_list {
+    z-index: 9999;
+    position: absolute;
+    border-radius: 3px;
+    padding: 12px;
+    top: 20px;
+    right: 16px;
+    width: 300px;
+    height: auto;
+    font-size: 13px;
+    background: @bgColor;
+    color: @foreColor;
+    padding-left: 24px;
+    span.tip_list_title {
+      font-size: 14px;
+      color: @foreColor;
+    }
+    .tip_item {
+      list-style: circle;
+    }
+  }
+}

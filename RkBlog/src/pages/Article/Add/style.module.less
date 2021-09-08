@@ -1,0 +1,87 @@
+@import '../../../assets/styles/var.less';
+.editBtn, .submitBtn {
+  position: fixed;
+  bottom: 32px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background: #373737;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .hover_transition();
+  &:hover {
+    background-color: #6a6a6a;
+    cursor: pointer;
+  }
+}
+
+.editBtn {
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.submitBtn {
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@width: 1000px;
+
+.container {
+  width: @width;
+  margin: 0 auto;
+}
+
+.banners {
+  overflow: hidden;
+  img {
+    width: @width;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.info {
+  &_item {
+    margin-bottom: 24px;
+    &>label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  @pwidth: 800px;
+  .container {
+    width: @pwidth;
+  }
+  .banners {
+    img {
+      width: @pwidth;
+      height: 250px;
+    }
+  }
+}
+
+@media screen and (max-width: 866px) {
+  @pwidth: 800px;
+  .container {
+    width: @pwidth;
+  }
+  .banners {
+    img {
+      width: @pwidth;
+      height: 250px;
+    }
+  }
+}
